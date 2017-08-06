@@ -1,10 +1,13 @@
-require lib/bot_dispatcher.rb
+require './lib/bot_dispatcher.rb'
+require 'logger'
 
-class WebhookController < ApplicationController
+class WebhooksController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def callback
-    bot_dispatcher.new(chat, user, text, lang) unless text.nil? # nil or false?
+    $logger = Logger.new(STDOUT)
+
+    BotDispatcher.new(chat, text, lang).process unless text.nil? # nil or false?
     render nothing: true, head: :ok
   end
 
@@ -26,9 +29,9 @@ class WebhookController < ApplicationController
     from[:language_code]
   end
 
-  def user
-    from[:id]
-  end
+  #def user
+  #  from[:id]
+  #end
 
   def chat
     message[:chat][:id]
