@@ -5,8 +5,6 @@ class WebhooksController < ApplicationController
   # skip_before_action :verify_authenticity_token
 
   def callback
-    $logger = Logger.new(STDOUT)
-
     BotDispatcher.new(chat, text, lang).process unless text.nil? # nil or false?
     render nothing: true, head: :ok
   end

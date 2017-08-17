@@ -18,10 +18,10 @@ class BotDispatcher
   private
 
   def translate
-    TranslateJob.perform_later @chat, @text, lang_string
+    TranslationJob.perform_later @chat, @text, languages
   end
 
-  def lang_string
+  def languages
     lang = @lang.split('-').first
     if lang =~ /pt/
       lang_1, lang_2 = 'pt', 'ru'
@@ -30,7 +30,7 @@ class BotDispatcher
     else
       lang_1, lang_2 = 'auto', 'zh-CN'
     end
-    "#{lang_1}/#{lang_2}"
+    {from: lang_1, to: lang_2}
   end
 
   def reply txt

@@ -31,3 +31,7 @@ module PortoRussoBot
     config.api_only = true
   end
 end
+
+require './lib/g_translation.rb'
+
+GTranslation.init
