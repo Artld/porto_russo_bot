@@ -1,5 +1,5 @@
 # require "rubygems"
-require "google_drive"
+require 'google_drive'
 
 # http://badrit.com/blog/2011/12/25/free-google-translate-api-v2
 class GTranslation
@@ -12,18 +12,29 @@ class GTranslation
     # First worksheet of http://spreadsheets.google.com/ccc?key=...
     @@ws = session.spreadsheet_by_key("15DD8yQCyRyKIg0BFTFQ9i1SKw2Q-lc9GH32hw8PKyw4").worksheets[0]
     $logger.debug 'spreadsheet OK'
+    @@row = 0
   end
 
   def self.call text, lang_1, lang_2
-    # call my script from spreadsheet
-    # @ws[2,1] = '=gTranslate("this is a test", "en", "es")'
+    row = next_row
     $logger.debug lang_1
     $logger.debug lang_2
-    @@ws[2,1] = "=gTranslate(\"#{text}\", \"#{lang_1}\", \"#{lang_2}\")"
+    # call my script from spreadsheet
+    @@ws[row,1] = "=gTranslate(\"#{text}\", \"#{lang_1}\", \"#{lang_2}\")"
     @@ws.save
-
     # Reloads the worksheet to get my changes effect
     @@ws.reload
-    @@ws[2,1]  #Esta es una prueba
+    @@ws[row,1]  #Esta es una prueba
+  end
+
+  private
+
+  def self.next_row
+    if @@row > 30
+      @@row = 1
+    else
+      @@row += 1
+    end
+    @@row
   end
 end

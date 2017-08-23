@@ -6,9 +6,9 @@ class BotDispatcher
   end
 
   def process
-    if @text =~ /\/[Ss]tart/
+    if @text =~ /\/start/i
       reply 'I love you! Send me portuguese or russian text and I\'ll translate it!'
-    elsif @text =~ /\/[Ss]top/
+    elsif @text =~ /\/stop/i
       reply 'Goodbye!'
     else
       translate
@@ -21,14 +21,14 @@ class BotDispatcher
     TranslationJob.perform_later @chat, @text, languages
   end
 
+  # Language auto detection
   def languages
-    lang = @lang.split('-').first
-    if lang =~ /pt/
-      lang_1, lang_2 = 'pt', 'ru'
-    elsif lang =~ /ru/
+    if @text =~ /[а-я]+/ui
       lang_1, lang_2 = 'ru', 'pt'
+    elsif @text =~ /[a-z]+/i
+      lang_1, lang_2 = 'pt', 'ru'
     else
-      lang_1, lang_2 = 'auto', 'zh-CN'
+      lang_1, lang_2 = 'auto', 'en'
     end
     {from: lang_1, to: lang_2}
   end
