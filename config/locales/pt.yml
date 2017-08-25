@@ -1,0 +1,5 @@
+pt:
+  hello: 'Olá! Envie seu_texto/translate ou seu_texto/t para português <-> russo tradução'
+  bye: 'Tchau!'
+  commands: "/strat\n/stop\n/commands\n/translate algum_texto\n/t algum_texto\n
+  /en algum_texto\n /es, /de, /nl, /fr e algum outro"

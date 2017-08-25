@@ -30,4 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: 'I love you! Send /translate your_text or /t your_text for portuguese <-> russian translation.'
+  bye: 'Goodbye!'
+  commands: "/strat\n/stop\n/commands\n/translate some_text\n/t some_text\n/en some_text\n
+  + /es, /de, /fr, /it, /la and some other"
