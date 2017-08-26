@@ -7,7 +7,7 @@ class GTranslation
     # Logs in. You can also use OAuth
     $logger = Logger.new(STDOUT)
     $logger.debug 'try to create session'
-    session = GoogleDrive::Session.from_config('./config/google_drive_config.json')
+    session = GoogleDrive::Session.from_config('./config/g_drive_config.json')
     $logger.debug 'session OK'
     # First worksheet of http://spreadsheets.google.com/ccc?key=...
     @@ws = session.spreadsheet_by_key("15DD8yQCyRyKIg0BFTFQ9i1SKw2Q-lc9GH32hw8PKyw4").worksheets[0]

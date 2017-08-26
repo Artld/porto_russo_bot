@@ -17,7 +17,7 @@ class BotDispatcher
     when /\/t\b/, /\/translate/i
       @text.slice! $&  # removing last matching text from string
       translate auto_detect_language
-    when /\/(en|es|de|nl|da|fr|it|ar|la|el|iw|hi|hu|ga|is|id|ja|jw|km|ko|fa|pt|ro|ru|sv|tr|vi|zh-CN|zh-TW)\b/
+    when /\/(#{$SUPPORTED_LANGUAGES})\b/
       @text.slice! $&
       translate({from: '', to: $&[1..-1]})
     else

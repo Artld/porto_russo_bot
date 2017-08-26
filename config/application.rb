@@ -33,5 +33,6 @@ module PortoRussoBot
 end
 
 require './lib/g_translation.rb'
-
 GTranslation.init
+
+$SUPPORTED_LANGUAGES = File.open('./config/g_supported_languages.csv', "rb").read
