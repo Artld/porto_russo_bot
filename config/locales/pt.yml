@@ -1,6 +1,6 @@
 pt:
   hello: 'Olá! Basta enviar-me um texto para a tradução portugues <-> russa. Para a mesma
- ação dentro do grupo, envie /translate seu_texto ou /t seu_texto. Veja mais em /commands' 
+ ação dentro do grupo, envie /translate seu_texto ou /t seu_texto ou seu_texto/t. Veja mais em /commands'
   bye: 'Tchau!'
-  commands: "/start\n/stop\n/commands\n/translate algum_texto\n/t algum_texto\n
- /en algum_texto\n /es, /de, /nl, /fr e algum outro"
+  commands: "/start\n/stop\n/commands\n/translate algum_texto\n/t algum_texto\n/en
+ algum_texto\ne o mesmo para todos os idiomas suportados pelo Google: /es, /de, /nl, /fr ..."

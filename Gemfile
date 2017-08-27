@@ -11,6 +11,7 @@ gem 'puma', '~> 3.7'
 gem 'telegram-bot-ruby'
 gem 'google_drive'
 gem 'rails-i18n', '~> 5.0.0'
+gem 'json'
 
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'

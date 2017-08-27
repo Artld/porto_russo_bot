@@ -9,7 +9,7 @@ class BotConnector
   end
 
   def send_message
-    $logger.debug "message sending... #{@chat} ... #{@text}"
+    # $logger.debug "message sending... #{@chat} ... #{@text}"
     @api.call('sendMessage', chat_id: @chat, text: @text)
   end
 end

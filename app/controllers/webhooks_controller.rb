@@ -1,5 +1,4 @@
 require './lib/bot_dispatcher.rb'
-require 'logger'
 
 class WebhooksController < ApplicationController
   def callback

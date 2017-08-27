@@ -3,7 +3,11 @@ require './lib/bot_connector.rb'
 class BotDispatcher
   def initialize(chat, text, lang)
     @chat, @text, @lang = chat, text, lang
-    I18n.locale = @lang if Set.new(['pt', 'en', 'ru']).include? @lang
+    if Set.new(['pt', 'en', 'ru']).include? @lang
+      I18n.locale = @lang
+    else
+      I18n.locale = 'en'
+    end
   end
 
   def process

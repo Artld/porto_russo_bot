@@ -3,5 +3,6 @@ ru:
  перевода. Для того же действия внутри группы отправьте /translate ваш_текст
  или /t ваш_текст. См. Больше в /commands'
   bye: 'Прощай!'
-  commands: "/start\n/stop\n/commands\n/translate некоторый_текст\n/t некоторый_текст\n
- /en некоторый_текст\n/pt, /es, /ru, /fr, /de ..."
+  commands: "/start\n/stop\n/commands\n/translate некоторый_текст\n/t некоторый_текст\n/en
+ некоторый_текст\nи так же для всех языков, поддерживаемых Google: /pt, /es, /ru,
+ /fr, /de ..."

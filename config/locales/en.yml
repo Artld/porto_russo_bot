@@ -31,7 +31,7 @@
 
 en:
   hello: 'I love you! Just send me a text for portuguese <-> russian translation. For the same
- action inside group send /translate your_text or /t your_text. See more in /commands'
+ action inside group send /translate your_text or /t your_text or your_text/t. See more in /commands'
   bye: 'Goodbye, sweety!'
-  commands: "/start\n/stop\n/commands\n/translate some_text\n/t some_text\n/en some_text\n
- + /pt, /ru, /es, /de, /fr, /it and some other"
+  commands: "/start\n/stop\n/commands\n/translate some_text\n/t some_text\n/en some_text\nand
+ same for all languages supported by Google: /pt, /ru, /es, /de, /fr, /it ..."
