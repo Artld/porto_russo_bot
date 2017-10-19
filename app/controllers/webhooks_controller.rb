@@ -1,5 +1,5 @@
-require './lib/bot_dispatcher.rb'
-
+# Based on Maxim Abramchuk work:
+# https://botcube.co/blog/2017/02/04/full-guide-on-creating-telegram-bot-with-rails.html
 class WebhooksController < ApplicationController
   def callback
     BotDispatcher.new(chat, text, lang).process unless text.nil?
@@ -25,10 +25,6 @@ class WebhooksController < ApplicationController
     code = code.split('-').first if code.match /-/
     code
   end
-
-  #def user
-  #  from[:id]
-  #end
 
   def chat
     message[:chat][:id]

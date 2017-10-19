@@ -1,6 +1,16 @@
 pt:
-  hello: 'Olá! Basta enviar-me um texto para a tradução portugues <-> russa. Para a mesma
- ação dentro do grupo, envie /translate seu_texto ou /t seu_texto ou seu_texto/t. Veja mais em /commands'
-  bye: 'Tchau!'
-  commands: "/start\n/stop\n/commands\n/translate algum_texto\n/t algum_texto\n/en
- algum_texto\ne o mesmo para todos os idiomas suportados pelo Google: /es, /de, /nl, /fr ..."
+  start: "Envie / + o código do idioma em que deseja receber a tradução + o texto em qualquer idioma. Por exemplo:\n\
+  /pt If I could write the beauty of your eyes and in fresh numbers number all your graces\n\
+  Pau no cu, pau no cu!! Viva a morte do meu pau, caralho!! Buceta pra todo mundo, e arregaçando o cu dos gringos /en\n\
+  Se o idioma não for especificado, a tradução é feita do cirílico para o português e do latim para o russo.\n\
+  Se você usa um bot dentro de um grupo, basta enviar /traduzir seu_texto ou /t seu_texto. Você não precisa especificar o nome do bot. Mais no /commands"
+  stop: Tchau!
+  commands: "/start\n\
+  /stop\n\
+  /commands\n\
+  /traduzir algum_texto\n\
+  /translate algum_texto\n\
+  /t algum_texto\n\
+  /pt algum_texto\n\
+  /en algum_texto\n\
+  e o mesmo para todos os idiomas suportados pelo Google: /es, /de, /nl, /fr, /zh-CN ..."

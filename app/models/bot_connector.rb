@@ -1,7 +1,8 @@
 require 'telegram/bot'
 
+# Sends messages to Telegram server
 class BotConnector
-  def initialize chat, text
+  def initialize(chat, text)
     @chat = chat
     @text = text
     token = Rails.application.secrets.telegram_bot_token
@@ -9,7 +10,6 @@ class BotConnector
   end
 
   def send_message
-    # $logger.debug "message sending... #{@chat} ... #{@text}"
     @api.call('sendMessage', chat_id: @chat, text: @text)
   end
 end
