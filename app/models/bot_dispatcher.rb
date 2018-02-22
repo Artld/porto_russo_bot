@@ -8,12 +8,15 @@ class BotDispatcher
     case @text
     when /\A\/((start)|(stop)|(commands))\z/i
       reply I18n.t @text[1..-1]
-    when /\/t\b/, /\/traduzir/i, /\/translate/i
+    when /\/t\b/, /\/т\b/, /\/traduzir/i, /\/translate/i
       @text.slice! $& # removing last matching text from string
       translate auto_detect_language
     when /\/(#{$SUPPORTED_LANGUAGES})\b/
       @text.slice! $&
       translate({ from: '', to: $&[1..-1] })
+    when /\/ру\b/
+      @text.slice! $&
+      translate({ from: '', to: 'ru' })
     else
       translate auto_detect_language if @chat > 0
     end

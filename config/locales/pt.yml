@@ -8,9 +8,9 @@ pt:
   commands: "/start\n\
   /stop\n\
   /commands\n\
-  /traduzir algum_texto\n\
+  /traduzir  algum_texto\n\
   /translate algum_texto\n\
-  /t algum_texto\n\
+  /t  algum_texto\n\
   /pt algum_texto\n\
   /en algum_texto\n\
   e o mesmo para todos os idiomas suportados pelo Google: /es, /de, /nl, /fr, /zh-CN ..."
