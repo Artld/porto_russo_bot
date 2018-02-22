@@ -1,7 +1,7 @@
 class BotDispatcher
   def initialize(chat, text, lang)
     @chat, @text, @lang = chat, text, lang
-    I18n.locale = Set.new(['pt', 'ru']).include?(@lang) ? @lang : 'en'
+    I18n.locale = %w(pt ru).include?(@lang) ? @lang : 'en'
   end
 
   def process
@@ -27,13 +27,13 @@ class BotDispatcher
 
   def auto_detect_language
     if @text =~ /[а-я]+/ui
-      lang_1, lang_2 = 'ru', 'pt'
+      lang1, lang2 = 'ru', 'pt'
     elsif @text =~ /[a-z]+/i
-      lang_1, lang_2 = 'pt', 'ru'
+      lang1, lang2 = 'pt', 'ru'
     else
-      lang_1, lang_2 = '', 'en'
+      lang1, lang2 = '', 'en'
     end
-    { from: lang_1, to: lang_2 }
+    { from: lang1, to: lang2 }
   end
 
   def reply(txt)

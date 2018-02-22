@@ -9,8 +9,8 @@ ru:
   commands: "/start\n\
   /stop\n\
   /commands\n\
-  /translate [ваш текст]\n\
-  /t [ваш текст]\n\
-  /en [ваш текст]\n\
-  /ru [your text]\n\
+  /translate ваш текст\n\
+  /t ваш текст\n\
+  /en ваш текст\n\
+  /ru your text\n\
   и такие же команды для всех языков, поддерживаемых Google: /pt, /es, /fr, /de, /ja ..."
